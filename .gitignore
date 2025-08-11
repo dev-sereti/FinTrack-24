@@ -1,0 +1,25 @@
+# Node/JS
+node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+dist
+coverage
+*.local
+
+# Env
+.env
+.env.*
+!.env.example
+
+# Nuxt/Vercel
+.nuxt
+.output
+.vercel
+
+# OS/Editor
+.DS_Store
+.idea
+.vscode/*
+!.vscode/extensions.json
