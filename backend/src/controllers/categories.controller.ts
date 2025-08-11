@@ -57,7 +57,7 @@ export const updateCategory = async (req: AuthRequest, res: Response) => {
       return res.status(400).json({ error: 'Category ID is required' });
     }
 
-    // Create a properly typed update data object
+    // Updated data object
     const updateData: Prisma.CategoryUpdateInput = {
       ...(parsed.data.name !== undefined && { name: parsed.data.name }),
       ...(parsed.data.type !== undefined && { type: parsed.data.type }),
