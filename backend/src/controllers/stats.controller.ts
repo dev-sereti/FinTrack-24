@@ -53,7 +53,7 @@ export const incomeVsExpense = async (req: AuthRequest, res: Response) => {
 
   let income = 0, expense = 0;
   for (const t of data) {
-    if (!t.category) continue; // Guard
+    if (!t.category) continue;
 
     if (t.category.type === 'INCOME') income += Number(t.amount ?? 0);
     if (t.category.type === 'EXPENSE') expense += Number(t.amount ?? 0);
