@@ -2,7 +2,7 @@ import { prisma } from '../utils/prisma';
 import { Response } from 'express';
 import { AuthRequest } from '../middleware/auth';
 
-// Map DB category type to lowercase key names
+// Map DB category type to lowercase key names(Errors fixed.)
 const categoryMap: Record<'INCOME' | 'EXPENSE' | 'SAVINGS', 'income' | 'expense' | 'savings'> = {
   INCOME: 'income',
   EXPENSE: 'expense',
