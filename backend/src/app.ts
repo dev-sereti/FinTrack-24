@@ -20,7 +20,15 @@ app.use(morgan('dev'));
 
 app.use(rateLimit({ windowMs: 15 * 60 * 1000, max: 200 }));
 
-app.get('/health', (_, res) => res.json({ ok: true }));
+app.get('/', (_req, res) => {
+  res.json({
+    ok: true,
+    service: 'FinTrack 24 API',
+    routes: ['/health', '/auth', '/categories', '/transactions', '/stats', '/exchange'],
+  });
+});
+
+app.get('/health', (_req, res) => res.json({ ok: true }));
 
 app.use('/auth', authRoutes);
 app.use('/categories', categoryRoutes);
