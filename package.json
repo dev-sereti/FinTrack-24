@@ -29,6 +29,9 @@
     "tailwindcss": "^4.1.11"
   },
   "dependencies": {
-    "@prisma/client": "^6.13.0"
+    "@pinia/nuxt": "^0.11.2",
+    "@prisma/client": "^6.13.0",
+    "@tailwindcss/postcss": "^4.1.11",
+    "pinia": "^3.0.3"
   }
 }
